@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+ }
+
+:root {
+    --bg-color : #fff;
+    --bg-color-secondary : #EEEEEE;
+    --text-color : #101A24;
+    --text-color-secondary :#5C6574;
+    --text-clor-tiga: #fff;
+    --ijoo--: #00ADB5;
+    --abu-kece: #393E46;
+    --item: #222831;
+   --font-judul-: 'Lato', sans-serif;
+   --font-isi-: 'Quicksand', sans-serif;
+}
+
+ body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 70px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: var(--bg-color);
+    z-index: 100;
+    position: fixed;
+}
+
+.logo{
+  color: var(--item);
+  cursor: default;
+}
+
+.logo img{
+  width: 50px;
+}
+
+.logo p{
+  font-family: var(--font-judul-);
+}
+
+.navbar {
+    margin-top: 23px;
+    display: flex;
+}
+
+.navbar a {
+    margin-right: 45px;
+    color: var(--item);
+    font-family: var(--font-judul-);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar a:hover{
+    color: var(--ijoo--);
+}
+
+.intro {
+    padding: 6rem;
+    background: url(images/profile.png);
+    background-size: 100%;
+    text-align: left;
+    margin-top: 5rem;
+}
+
+.intro h1{
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--text-clor-tiga);
+  font-family: var(--font-judul-);
+}
+
+span {
+  font-weight: 510;
+  font-family: var(--font-judul-);
+}
+
+.button{
+  margin-top: 40px;
+}
+ 
+.btn{
+  padding: 8px 1.5rem;
+  border: 1.5px solid var(--bg-color);
+  border-radius: 47px;  
+  background: var(--ijoo--);
+  font-size: 16px;
+  font-weight: 550;
+  font-family: var(--font-judul-);
+  color: var(--text-clor-tiga);
+  transition: .2s ease;
+}
+
+.btn:hover{
+  background: var(--abu-kece);
+}
+
+/* BERANDA */
+
+.awal {
+  background: var(--bg-color);
+  text-align: center;
+  padding: 15rem;
+}
+
+.awal h1{
+  font-size: 60px;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+}
+
+.awal p{
+  font-size: 20px;
+  font-family: var(--font-isi-);
+  font-weight: 500;
+}
+
+.who {
+  background: var(--bg-color-secondary);
+  padding: 5rem 5rem;
+}
+
+.who h1{
+  font-size: 50px;
+  font-weight: 400;
+  font-family: var(--font-judul-);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.semua{
+  align-items: center;
+  margin-bottom: 15rem;
+  margin-top: 10rem;
+}
+
+.card{
+  position: relative;
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  /* border-radius: 20px; */
+  transition: .8s;
+}
+.card .circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card .circle::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--ijoo--);
+  clip-path: circle(100px at center);
+  transition: .8s;
+}
+
+.card:hover .circle:before{
+  clip-path: circle(400px at center);
+  background: var(--abu-kece);
+}
+
+.card img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  transition: .8s;
+}
+
+.card:hover img{
+  left: 80%;
+  height: 450px;
+}
+
+.card .content{
+  position: absolute;
+  width:67%;
+  left: 20%;
+  padding: 15px 15px 15px 35px;
+  transition: 0.8s;
+  opacity: 0;
+  visibility: hidden;
+}
+.card:hover .content{
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .content h2{
+  color: var(--text-clor-tiga);
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1em;
+  font-family: var(--font-judul-);
+  margin-top: 10px;
+}
+
+.card .content h3{
+  color: var(--text-clor-tiga);
+  font-size: 20px;
+  font-family: var(--font-judul-);
+  margin-bottom: 20px;
+}
+
+.card .content p{
+  color: var(--text-clor-tiga);
+  font-family: var(--font-judul-);
+}
+
+/* SECTION TENTANG KAMI */
+
+.tentang-kami {
+  background: url(images/tangan.jpg);
+  background-size: 100%;
+  padding: 10rem 3rem;
+}
+
+.judul {
+  text-align: center;
+  color: var(--text-clor-tiga);
+}
+
+.judul h2{
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+}
+
+.judul h1{
+  font-size: 4.3rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+}
+
+.vimi{
+  background: linear-gradient(rgba(0,0,0,0.0), var(--ijoo--));
+  background-size: 100%;
+  padding: 3rem;
+  text-align: left;
+  margin-top: 15rem;
+}
+
+div.vimi{
+  width: 800px;
+  height: 560px;
+}
+
+.vimi h1{
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+  color: var(--text-clor-tiga);
+}
+
+.vimi p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--font-isi-);
+  color: var(--text-clor-tiga);
+}
+
+.menangani{
+  background: linear-gradient(rgba(0,0,0,0.1), var(--ijoo--));
+  background-size: 100%;
+  padding: 3rem;
+  text-align: left;
+  margin-top: 15rem;
+  margin-left: 34rem;
+}
+
+div.menangani{
+  width: 800px;
+  height: 500px;
+}
+
+.menangani h1{
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+  color: var(--text-clor-tiga);
+  line-height: 5rem;
+}
+
+.menangani p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--font-isi-);
+  color: var(--text-clor-tiga);
+  line-height: 2rem;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1.5s ease ;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+/* SECTION KOMITMEN */
+
+.komitmen{
+  background: linear-gradient(rgba(255, 255, 255, 0.1), var(--abu-kece));
+  padding: 5rem 4rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: 100%;
+}
+
+.judul2 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.judul2 h1{
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+}
+
+.kom{
+  background: var(--abu-kece);
+  padding: 2.5rem;
+  text-align: left;
+  margin-top: 5rem;
+  margin-left: 38rem;
+  border: 1.5px solid var(--bg-color);
+  border-radius: 50px;;
+}
+
+div.kom{
+  width: 700px;
+  height: 300px;
+}
+
+.kom h1{
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+  color: var(--text-clor-tiga);
+  
+}
+
+.kom p{
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: var(--font-isi-);
+  color: var(--text-clor-tiga);
+  line-height: 2rem;
+}
+
+.fokus{
+  background: var(--abu-kece);
+  padding: 2.5rem;
+  text-align: left;
+  margin-top: 5rem; 
+  border: 1.5px solid var(--bg-color);
+  border-radius: 50px;;
+}
+
+div.fokus{
+  width: 700px;
+  height: 380px;
+}
+
+.fokus h1{
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: var(--font-judul-);
+  color: var(--text-clor-tiga);
+}
+
+.fokus p{
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: var(--font-isi-);
+  color: var(--text-clor-tiga);
+  line-height: 2rem;
+}
+
+
+
+/* SECTION KONTAK */
+
+.kontak{
+  background: var(--bg-color);
+  padding: 30px 80px;
+  margin-top: 3rem;
+}
+
+.kontak .judul{
+  text-align: center;
+  font-size: 4.3rem;
+  font-family: var(--font-judul-);
+  color: var(--text-color);
+  margin-top: 30px;
+}
+
+
+.semua {
+  display: flex;
+}
+
+.semua .kiri{
+  margin-top: 1rem;
+}
+
+.satu h1{
+  color: var(--text-color);
+  font-family: var(--font-judul-);
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  width: 30rem;
+  height: 5px;
+  color: var(--ijoo--); 
+  background-color: var(--ijoo--);
+}
+
+.satu p{
+  color: var(--text-color);
+  font-family: var(--font-isi-);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-top: 1rem;
+  width: 500px;
+}
+
+.dua{
+  margin-top: 5rem;
+}
+
+.dua h1{
+  color: var(--text-color);
+  font-family: var(--font-judul-);
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.dua p{
+  color: var(--text-color);
+  font-family: var(--font-isi-);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2rem;
+  width: 480px;
+}
+
+.semua .kanan{
+  margin-top: 6rem;
+}
+
+.kanan h1{
+  color: var(--text-color);
+  font-family: var(--font-judul-);
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: center;
+}
+
+.kontak form {
+  max-width: 25rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.kontak form .input-box {
+  flex-wrap: wrap;
+}
+
+.kontak form .input-box input,
+.kontak form  textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color-secondary);
+  border-radius:  .8rem;
+  margin:  .5rem 0;
+}
+
+.kontak form .input-box input {
+  width: 100%;
+}
+
+.kontak form textarea {
+  resize: none;
+}
+
+.kontak form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/* SECTION FOOTER */
+
+.footer {
+  padding: 50px 80px;
+  display: flex;
+  background: var(--bg-color-secondary);
+}
+
+.kiri img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.kiri p{
+  color:var(--text-color);
+  font-family: var(--font-judul-);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.kanan {
+  margin-top: 7rem;
+  margin-left: 20rem;
+}
+
+.kanan p {
+  color:var(--text-color);
+  font-family: var(--font-judul-);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
